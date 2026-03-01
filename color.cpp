@@ -68,4 +68,73 @@ int main()
     color4.print();
 
     return 0;
+} 
+//Default constructor
+
+Color::Color()
+{
+    red = 0;
+    green = 0;
+    blue = 0;
+} 
+
+//Overloaded constructor 
+Color::Color(int r, int g, int b)
+{
+    setRed(r);
+    setGreen(g);
+    setBlue(b);
+}
+
+//setter func
+void Color::setRed(int r)
+{
+    if (r >= MIN_RGB && r <= MAX_RGB)
+    red = r;
+    else
+    {
+        cout << "Error Red value is out of range. Setting to 0. \n";
+        red = 0;
+    }
+} 
+
+void Color::setGreen(int g)
+{
+    if (g >= MIN_RGB && g <= MAX_RGB)
+    green = g;
+    else 
+    {
+        cout << "Error: Green value is out of range. Setting to 0.\n";
+        green = 0;
+    }
+}
+
+void Color::setBlue(int b)
+{
+    if (b >= MIN_RGB && b <= MAX_RGB)
+    blue = b;
+    else 
+    {
+        cout << "Error: Blue value is out of range. Setting to 0.\n";
+        blue = 0;
+    }
+} 
+// Getter Functions
+int Color::getRed() const
+{
+    return red;
+} 
+int Color::getGreen() const
+{
+    return green;
+} 
+int Color::getBlue() const
+{
+    return blue;
+}
+//Outputs formatted RGB values
+void Color::print() const
+{
+    cout << left << setw(10) << red << setw(10) << green << setw(10) << blue << endl;
+
 }
