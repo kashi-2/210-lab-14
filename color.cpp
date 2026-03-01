@@ -52,9 +52,20 @@ int main()
 
     //printing table header
     cout << left << setw(10) << "Color" << setw(10) << "Red" << setw(10) << "Green" << setw(10) << "Blue" << endl;
+    
     cout << "----------------------------------\n";
 
-    
+    cout << setw(10) << "Color1";
+    color1.print();
+
+    cout << setw(10) << "Color2";
+    color2.print();
+
+    cout << setw(10) << "Color3";
+    color3.print();
+
+    cout << setw(10) << "Color4";
+    color4.print();
 
     return 0;
 }
